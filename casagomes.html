@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasaGomes's machine</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="div_titulo">
+        <h1 class="titulo">CasaGomes's Machine</h1>
+    </div>
+    <div class="div_machine">
+        <div class="div_casagomes">
+            <h2 class="titulo_machine">Bora converter um número DECIMAL</h2>
+            <input type="text" id="input_n1" class="machine" placeholder="Digite um Número">
+            <p class="clicar">Clique no botão para converter o número nas bases binário, octal e hexadecimal:</p><br>
+            <button onclick="transformar1()" class="botao">Converter</button>
+            <div id="divmsg1" class="mensagem"></div>
+        </div>
+        <div class="div_casagomes">
+            <h2 class="titulo_machine">Bora converter um número BINÁRIO</h2>
+            <input type="text" id="input_n2" class="machine" placeholder="Digite um Número">
+            <p class="clicar">Clique no botão para converter o número nas bases decimal, octal e hexadecimal:</p><br>
+            <button onclick="transformar2()" class="botao">Converter</button>
+            <div id="divmsg2" class="mensagem"></div>
+        </div>
+    </div>
+    <div class="div_machine">
+        <div class="div_casagomes">
+            <h2 class="titulo_machine">Bora converter um número OCTAL</h2>
+            <input type="text" id="input_n3" class="machine" placeholder="Digite um Número">
+            <p class="clicar">Clique no botão para converter o número nas bases decimal, binário e hexadecimal:</p><br>
+            <button onclick="transformar3()" class="botao">Converter</button>
+            <div id="divmsg3" class="mensagem"></div>
+        </div>
+        <div class="div_casagomes">
+            <h2 class="titulo_machine">Bora converter um número HEXADECIMAL</h2>
+            <input type="text" id="input_n4" class="machine" placeholder="Digite um Número">
+            <p class="clicar">Clique no botão para converter o número nas bases decimal, binário e octal:</p><br>
+            <button onclick="transformar4()" class="botao">Converter</button>
+            <div id="divmsg4" class="mensagem"></div>
+        </div>
+    </div>
+    <div class="div_machine">
+        <div class="div_dupla">
+            <h3 class="titulo_dupla">Integrantes da Dupla:</h3>
+            <p class="nome">Ayrton Casa</p>
+            <p class="nome">Gabriel Gomes Corrêa</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    function transformar1(){
+        var num = Number(input_n1.value);
+
+        let binario = num.toString(2);
+        let octal = num.toString(8);
+        let hexa = num.toString(16);
+
+        divmsg1.innerHTML = `<br>O ${num} na base 2 (binário): ${binario} <br>O ${num} na base 8 (octal): ${octal} 
+        <br>O ${num} na base 16 (hexadecimal): ${hexa}<br><br><button onclick="limpar1()" class="botao">Limpar</button>`;
+    }
+    function transformar2(){
+        var inputNumber = input_n2.value.trim();
+        let num = parseInt(inputNumber, 2);
+
+        let decimal = num.toString(10);
+        let octal = num.toString(8);
+        let hexa = num.toString(16);
+
+        divmsg2.innerHTML = `<br>O ${inputNumber} na base 10 (decimal): ${decimal} <br>O ${inputNumber} na base 8 (octal): ${octal} 
+        <br>O ${inputNumber} na base 16 (hexadecimal): ${hexa}<br><br><button onclick="limpar2()" class="botao">Limpar</button>`;
+    }
+    function transformar3(){
+        let inputNumber = input_n3.value.trim();
+        let num = parseInt(inputNumber, 8);
+
+        let decimal = num.toString(10);
+        let binario = num.toString(2);
+        let hexa = num.toString(16);
+
+        divmsg3.innerHTML = `<br>O ${inputNumber} na base 10 (decimal): ${decimal} <br>O ${inputNumber} na base 2 (binário): ${binario} 
+        <br>O ${inputNumber} na base 16 (hexadecimal): ${hexa}<br><br><button onclick="limpar3()" class="botao">Limpar</button>`;
+    }
+    function transformar4(){
+        let inputNumber = input_n4.value.trim();
+        let num = parseInt(inputNumber, 16);
+
+        let decimal = num.toString(10);
+        let binario = num.toString(2);
+        let octal = num.toString(8);
+
+        divmsg4.innerHTML = `<br>O ${inputNumber} na base 10 (decimal): ${decimal} <br>O ${inputNumber} na base 2 (binário): ${binario} 
+        <br>O ${inputNumber} na base 8 (octal): ${octal}<br><br><button onclick="limpar4()" class="botao">Limpar</button>`;
+    }
+    function limpar1(){
+        divmsg1.innerHTML = ``;
+        input_n1.value = ``;
+    }
+    function limpar2(){
+        divmsg2.innerHTML = ``;
+        input_n2.value = ``;
+    }
+    function limpar3(){
+        divmsg3.innerHTML = ``;
+        input_n3.value = ``;
+    }
+    function limpar4(){
+        divmsg4.innerHTML = ``;
+        input_n4.value = ``;
+    }
+
+</script>

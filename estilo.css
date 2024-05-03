@@ -1,0 +1,76 @@
+*{
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0px;
+}
+.titulo{
+    font-family: "Encode Sans Expanded", sans-serif;
+    color: #d9d9d9;
+    font-size: 30px;
+    background-color: #3c6e71;
+    padding: 15px;
+}
+.div_machine{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.div_casagomes{
+    background-color: #353535;
+    height: 290px;
+    width: 600px;
+    margin: 5px;
+}
+.titulo_machine{
+    background-color: #353535;
+    color: #d9d9d9;
+    font-family: "Encode Sans Expanded", sans-serif;
+    padding: 10px;
+}
+.machine{
+    font-family: "Encode Sans Expanded", sans-serif;
+    color: #284b63;
+    border-radius: 5px;
+}
+.clicar{
+    font-family: "Encode Sans Expanded", sans-serif;
+    font-size: 13px;
+    background-color: #353535;
+    color: #d9d9d9;
+    padding-top: 20px;
+    font-weight: 600;
+}
+.botao{
+    font-family: "Encode Sans Expanded", sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3c6e71;
+    border: #d9d9d9 solid 1px;
+    color: #ffffff;
+}
+.botao:hover{
+    background-color: #2e5557;
+}
+.mensagem{
+    background-color: #353535;
+    font-family: "Encode Sans Expanded", sans-serif;
+    color: #d9d9d9;
+}
+.div_dupla{
+    background-color: #284b63;
+    height: 140px;
+    width: 100%;
+}
+.titulo_dupla{
+    background-color: #284b63;
+    font-family: "Encode Sans Expanded", sans-serif;
+    color: #d9d9d9;
+    padding: 10px;
+}
+.nome{
+    font-family: "Encode Sans Expanded", sans-serif;
+    background-color: #284b63;
+    color: #d9d9d9;
+    padding: 10px;
+    font-size: 16px;
+}
